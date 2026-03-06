@@ -137,4 +137,6 @@ project5/
 | Project 6 | Real-Time RAG Assistant | 🔄 Next |
 
 ---
+LIVE LINK:
+https://agentic-rag-pipeline.streamlit.app/
 
