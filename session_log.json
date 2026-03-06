@@ -1,0 +1,64 @@
+{
+  "session_log": [
+    {
+      "timestamp": "2026-03-06T08:50:02.209130",
+      "question": "What is Shinto?",
+      "answer": "Shinto is an ethnic religion focusing on ceremonies and rituals. Followers believe kami spirits are present in nature.",
+      "steps": 2
+    },
+    {
+      "timestamp": "2026-03-06T08:50:02.209190",
+      "question": "How does Shinto connect to nature?",
+      "answer": "Shinto connects to nature through kami spirits which are believed to inhabit rocks, trees, and mountains.",
+      "steps": 3
+    },
+    {
+      "timestamp": "2026-03-06T08:50:02.209910",
+      "question": "Question 0",
+      "answer": "Answer 0",
+      "steps": 1
+    },
+    {
+      "timestamp": "2026-03-06T08:50:02.209924",
+      "question": "Question 1",
+      "answer": "Answer 1",
+      "steps": 1
+    },
+    {
+      "timestamp": "2026-03-06T08:50:02.209927",
+      "question": "Question 2",
+      "answer": "Answer 2",
+      "steps": 1
+    },
+    {
+      "timestamp": "2026-03-06T08:50:02.209939",
+      "question": "Question 3",
+      "answer": "Answer 3",
+      "steps": 1
+    },
+    {
+      "timestamp": "2026-03-06T08:50:02.209946",
+      "question": "Question 4",
+      "answer": "Answer 4",
+      "steps": 1
+    },
+    {
+      "timestamp": "2026-03-06T08:50:02.209949",
+      "question": "Question 5",
+      "answer": "Answer 5",
+      "steps": 1
+    }
+  ],
+  "long_term_facts": [
+    {
+      "fact": "Japan practices Buddhism (66.7%) and Shinto (25.6%)",
+      "source": "japan_culture.pdf",
+      "timestamp": "2026-03-06T08:50:02.209186"
+    },
+    {
+      "fact": "Kami spirits in Shinto are present in nature",
+      "source": "japan_culture.pdf",
+      "timestamp": "2026-03-06T08:50:02.209196"
+    }
+  ]
+}
