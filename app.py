@@ -181,3 +181,47 @@ if query:
     })
 
     st.rerun()
+
+
+import os
+from pathlib import Path
+import PyPDF2
+import requests
+
+def setup_chromadb():
+    if Path("chroma_db").exists():
+        return
+    
+    st.info("🔄 First run — downloading and indexing PDFs...")
+    
+    docs = {
+        "japan_culture.pdf": "Culture_of_Japan",
+        "india_culture.pdf": "Culture_of_India",
+        "france_culture.pdf": "Culture_of_France"
+    }
+    
+    headers = {"User-Agent": "Mozilla/5.0"}
+    for filename, article in docs.items():
+        if not Path(filename).exists():
+            with st.spinner(f"Downloading {filename}..."):
+                url = (f"https://en.wikipedia.org/api/"
+                       f"rest_v1/page/pdf/{article}")
+                r = requests.get(url, headers=headers)
+                open(filename, "wb").write(r.content)
+    
+    with st.spinner("Building ChromaDB index..."):
+        from ingest import (
+            process_pdf, get_or_create_collection,
+            ingest_chunks
+        )
+        from sentence_transformers import SentenceTransformer
+        model = SentenceTransformer("all-MiniLM-L6-v2")
+        collection = get_or_create_collection()
+        for filename in docs.keys():
+            chunks = process_pdf(filename)
+            ingest_chunks(collection, chunks, model)
+    
+    st.success("✅ Ready!")
+    st.rerun()
+
+setup_chromadb()
