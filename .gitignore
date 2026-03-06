@@ -3,7 +3,6 @@ venv/
 __pycache__/
 *.pyc
 *.pdf
-graph.html
-triples.pkl
-knowledge_graph.pkl
+chroma_db/
+session_log.json
 .streamlit/
